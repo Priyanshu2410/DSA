@@ -13,15 +13,33 @@ public:
     Nodes(int data)
     {
         this->data = data;
-        this->next = next;
+        this->next = NULL;
+    }
+    ~Nodes()
+    {
+        int value=this ->data;
+        if(this->next!=NULL)
+        {
+            delete next;
+            this ->next=NULL;
+        }
+        cout<<"memory is free for node with data"<<value<<endl;
     }
 };
 
 void insertatHead(Nodes* &head, int d)
 {
     Nodes* temp = new Nodes(d);
-    temp->next = head;
+    temp->next = head; 
     head = temp;
+}
+
+void insertattail(Nodes* &tail,int d)
+{
+    
+    Nodes* temp = new Nodes(d);
+    tail->next = temp; 
+    tail = temp;
 }
 
 void print(Nodes* &head)
@@ -32,6 +50,33 @@ void print(Nodes* &head)
     {
         cout << temp -> data <<" ";
         temp = temp -> next;
+    }
+    cout<<endl;
+}
+void deletenord(int position,Nodes* &head)
+{
+    if(position==1)
+    {
+        Nodes* temp=head;
+        head = head ->next;
+        delete temp;
+    }
+    else
+    {
+        Nodes* curr =head;
+        Nodes* prev =NULL;
+
+        int count=1;
+        while(count<position)
+        {
+            prev=curr;
+            curr=curr->next;
+            count++;
+        }
+
+        prev ->next=curr ->next;
+        curr ->next=NULL;
+        delete curr;
     }
 }
 int main()
@@ -45,10 +90,23 @@ int main()
     Nodes* head = node1;
    print(head);
 
-    insertatHead(head, 12);
+    Nodes* tail= node1;
+
+    insertattail(tail, 12);
+    print(head);
+
+    insertattail(tail, 15);
+    print(head);
+
+    insertattail(tail, 22);
+    print(head);
+    // insertatHead(head, 12);
 //    print(head);
 
-    insertatHead(head, 15);
-   // print(head);
+    // insertatHead(head, 15);
+//    print(head);
+
+    deletenord(4,head);
+    print(head);
     return 0;
 }
