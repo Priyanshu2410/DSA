@@ -12,13 +12,17 @@ public:
 
     Nodes(int data)
     {
-        this->data = data;
-        this->next = NULL;
+        this -> data = data;
+        this -> next = NULL;
     }
+
+    // destructor
+
+
     ~Nodes()
     {
         int value=this ->data;
-        if(this->next!=NULL)
+        if(this -> next!=NULL)
         {
             delete next;
             this ->next=NULL;
@@ -30,7 +34,7 @@ public:
 void insertatHead(Nodes* &head, int d)
 {
     Nodes* temp = new Nodes(d);
-    temp->next = head; 
+    temp -> next = head; 
     head = temp;
 }
 
@@ -38,7 +42,7 @@ void insertattail(Nodes* &tail,int d)
 {
     
     Nodes* temp = new Nodes(d);
-    tail->next = temp; 
+    tail -> next = temp; 
     tail = temp;
 }
 
@@ -81,32 +85,66 @@ void deletenord(int position,Nodes* &head)
 }
 int main()
 {
+    int b;
+    cout<<"enter your first element to insert"<<endl;
+    cin>>b;
     // created a new node
-    Nodes* node1 = new Nodes(10);
+    Nodes* node1 = new Nodes(b);
     //  cout<< node1 ->data<<endl;
     // cout<< node1 ->next<<endl;
 
     // head pointed to node
     Nodes* head = node1;
-   print(head);
+//    print(head);
 
     Nodes* tail= node1;
 
-    insertattail(tail, 12);
-    print(head);
+//     insertattail(tail, 12);
+//     print(head);
 
-    insertattail(tail, 15);
-    print(head);
+//     insertattail(tail, 15);
+//     print(head);
 
-    insertattail(tail, 22);
-    print(head);
-    // insertatHead(head, 12);
-//    print(head);
+//     insertattail(tail, 22);
+//     print(head);
+//     // insertatHead(head, 12);
+// //    print(head);
 
-    // insertatHead(head, 15);
-//    print(head);
+//     // insertatHead(head, 15);
+// //    print(head);
 
-    deletenord(4,head);
-    print(head);
+//     deletenord(4,head);
+//     deletenord(2,head);
+//     print(head);
+
+    int choice;
+    do
+    {
+    cout<<"enter your choice"<<endl;
+    cout<<"choice 1 for insert"<<endl<<"choice 2 for deleate"<<endl;
+    
+    cin>>choice;
+    switch(choice)
+     {
+  case 1:
+        int n;
+        cout<<"enter your number"<<endl;
+        cin>>n;
+         insertattail(tail, n);
+         print(head);
+    break;
+  case 2:
+        int a;
+        cout<<"enter your position where you deleate your element"<<endl;
+        cin>>a;
+     deletenord(a,head);
+      print(head);
+
+    break;
+  default:
+        cout<<"wrong choice"<<endl;
+    }
+    } while (choice<2);
+
     return 0;
 }
