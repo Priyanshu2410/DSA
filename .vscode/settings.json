@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.ejs": "exprees js",
+        "array": "cpp",
+        "string": "cpp"
+    }
+}
