@@ -99,23 +99,6 @@ int main()
 
     Nodes* tail= node1;
 
-//     insertattail(tail, 12);
-//     print(head);
-
-//     insertattail(tail, 15);
-//     print(head);
-
-//     insertattail(tail, 22);
-//     print(head);
-//     // insertatHead(head, 12);
-// //    print(head);
-
-//     // insertatHead(head, 15);
-// //    print(head);
-
-//     deletenord(4,head);
-//     deletenord(2,head);
-//     print(head);
 
     int choice;
     do
