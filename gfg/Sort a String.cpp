@@ -13,9 +13,9 @@ int main(){
     }
 return 0;
 }
-// } Driver Code Ends
-string sort(string s){
-    //complete the function here
+
+string sort(string s)
+{
      sort(s.begin(),s.end());
     return s;
 }
