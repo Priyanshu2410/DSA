@@ -19,9 +19,6 @@ void printArray(int arr[], int size)
         cout << arr[i] << " ";
     cout << endl;
 }
- 
- 
-
 int main()
 {
     int N;
