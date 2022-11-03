@@ -40,7 +40,6 @@ int main()
         cin>>arr[i];
     }
     // int N = sizeof(arr) / sizeof(arr[0]);
-
     
     insertionSort(N,arr);
     cout << "Sorted array: \n";
