@@ -35,14 +35,13 @@ class Abc
             for(int i: ans)
                 System.out.print(i + " ");
             System.out.println();
+            
         }
     }
 }
 
 
 // } Driver Code Ends
-
-
 class Complete
 {
     public static ArrayList<Integer> array(int a[][], int b[], int n)
@@ -59,13 +58,9 @@ class Complete
                  }
              }
          }
-         
          ans.add(sum);
-         
          Arrays.sort(b);
-         
          ans.add(b[n-1]);
-         
          return ans;
     }
 }
