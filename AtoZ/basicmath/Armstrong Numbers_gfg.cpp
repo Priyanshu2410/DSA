@@ -15,7 +15,7 @@ class Solution {
         {
             int no=n%10;
             sum = sum+ (no*no*no);
-            n=n/10;
+            n=n/10; 
         }
         if(num==sum)
         {
