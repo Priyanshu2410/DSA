@@ -3,6 +3,7 @@
         "*.ejs": "exprees js",
         "array": "cpp",
         "string": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }
