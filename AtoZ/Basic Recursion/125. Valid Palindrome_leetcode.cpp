@@ -17,7 +17,7 @@ public:
         for(int i=0;i<s.length();i++)
         {
             if((s[i]>='a' && s[i]<='z') || (s[i]>='0'&&s[i]<='9'))
-            ch.emplace_back(s[i]);
+            ch.emplace_back(s[i]); 
             else if(s[i]>='A' && s[i]<='Z')
             {
                 char lower=tolower(s[i]);
