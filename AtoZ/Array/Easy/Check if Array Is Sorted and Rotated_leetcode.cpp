@@ -7,7 +7,7 @@ public:
             return true;
         
         for(int i=1; i<nums.size(); i++)
-            // detect order broken 
+     
             if(nums[i]<nums[i-1]){
                 cnt++;
                 if(cnt>1)
