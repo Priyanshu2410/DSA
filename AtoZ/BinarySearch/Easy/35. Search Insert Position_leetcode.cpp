@@ -1,6 +1,7 @@
-int searchInsert(vector<int>& arr, int x)
-{
-	 int n = arr.size(); 
+class Solution {
+public:
+    int searchInsert(vector<int>& arr, int x) {
+         int n = arr.size(); 
     int low = 0, high = n - 1;
     int ans = n;
 
@@ -17,4 +18,5 @@ int searchInsert(vector<int>& arr, int x)
         }
     }
     return ans;
-}
+    }
+};
