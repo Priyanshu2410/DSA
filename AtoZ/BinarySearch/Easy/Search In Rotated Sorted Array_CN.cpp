@@ -30,3 +30,7 @@ int search(vector<int>& arr, int n, int k)
     }
     return -1;
 }
+
+
+
+// leetcode qus is same
