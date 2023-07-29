@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-
+ 
 long long getTrappedWater(long long* arr, int n) {    
   if (n <= 2) {
         return 0; 
