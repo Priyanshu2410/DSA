@@ -27,27 +27,29 @@
 
 *****************************************************************/
 
-bool detectCycle(Node *head)
+Node *firstNode(Node *head)
 {
-	//	Write your code here
-    if(head == NULL || head -> next==NULL)
-        return false;
-    
-    Node *fast = head;
+    //    Write your code here.
     Node *slow = head;
+    Node *fast = head;
+    Node *entry = head;
+
     while(fast->next && fast->next->next)
     {
-        fast = fast -> next ->next;
         slow = slow -> next;
-
-        if(fast==slow)
+        fast = fast -> next -> next;
+        if(slow==fast)
         {
-            return true;
+            while(slow!=entry)
+            {
+                slow = slow ->next;
+                entry = entry -> next;
+            }
+            return entry;
         }
     }
-    return false;  
+    return NULL;
 }
-
 
 
 
@@ -63,22 +65,29 @@ bool detectCycle(Node *head)
  */
 class Solution {
 public:
-    bool hasCycle(ListNode *head) {
-        if(head == NULL || head -> next==NULL)
-        return false;
-    
-    ListNode *fast = head;
-    ListNode *slow = head;
-    while(fast->next && fast->next->next)
-    {
-        fast = fast -> next ->next;
-        slow = slow -> next;
-
-        if(fast==slow)
-        {
-            return true;
+    ListNode *detectCycle(ListNode *head) {
+        if (head == nullptr || head->next == nullptr) {
+            return nullptr; 
         }
-    }
-    return false;
+
+        ListNode *slow = head;
+        ListNode *fast = head;
+
+        while (fast != nullptr && fast->next != nullptr) {
+            slow = slow->next;
+            fast = fast->next->next;
+            
+            if (slow == fast) {
+                
+                ListNode *entry = head;
+                while (entry != slow) {
+                    entry = entry->next;
+                    slow = slow->next;
+                }
+                return entry;
+            }
+        }
+
+        return nullptr; 
     }
 };
