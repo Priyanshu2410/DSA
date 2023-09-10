@@ -27,11 +27,11 @@ Node *addTwoNumbers(Node *l1, Node *l2)
         Node *temp = dummy; 
         int carry = 0;
         while( (l1 != NULL || l2 != NULL) || carry) {
-            int sum = 0; 
+            int sum = 0; x
             if(l1 != NULL) {
                 sum += l1->data; 
                 l1 = l1 -> next; 
-            }
+            }z
             
             if(l2 != NULL) {
                 sum += l2 -> data; 
