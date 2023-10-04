@@ -10,4 +10,15 @@ public:
         }
         return nums.size()-count;
     }
+// other
+    set<int>st;
+
+    for(auto it: arr){
+
+        st.insert(it);
+
+    }
+
+    return st.size();
+
 };

@@ -40,6 +40,20 @@ class Solution{
           }
           return Union;
     }
+
+	// good but not optimal
+	set<int>st;
+
+    for(auto it: a){
+
+        st.insert(it);
+    }
+    for(auto it:b){
+        st.insert(it);
+    }
+    vector<int> vc(st.begin(), st.end());
+    return vc;
+
 };
 
 //{ Driver Code Starts.
