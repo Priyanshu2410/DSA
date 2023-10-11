@@ -24,6 +24,21 @@ class Solution{
         reverse(a.begin(),a.end());
         return a;
     }
+
+    //other
+    vector<int> ans;
+
+    int maxi=-1;
+
+    for(int i=nums.size()-1;i>=0;i--)
+     {
+        if(nums[i]>maxi) 
+        {
+            ans.push_back(nums[i]),maxi=nums[i];
+        }
+     }
+
+    return ans;
 };
 
 //{ Driver Code Starts.
