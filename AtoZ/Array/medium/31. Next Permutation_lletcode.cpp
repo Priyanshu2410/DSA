@@ -25,4 +25,17 @@ public:
 
     return A;
     }
+
+       // builtin function is also available
+              
+       #include<iostream>
+       #include<vector>
+       #include<algorithm>
+       
+       vector<int> nextGreaterPermutation(vector<int> &A) {
+           // Write your code here.
+           int n = A.size();
+           next_permutation(A.begin(), A.end());
+           return A;
+       }
 };
