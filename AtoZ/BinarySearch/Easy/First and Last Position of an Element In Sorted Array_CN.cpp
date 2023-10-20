@@ -50,8 +50,6 @@ int firstOccurance(vector<int>& arr, int n, int k){
 
 }
 
- 
-
 int lastOccurance(vector<int>& arr, int n, int k){
 
  
